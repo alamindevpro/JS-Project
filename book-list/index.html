@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JS Practice</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <!-- <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    /> -->
+    <script
+      src="https://kit.fontawesome.com/c1b498439e.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <div class="container mt-4">
+      <h1 class="display-4 text-center">
+        <i class="fas fa-book-open text-warning"></i> Book
+        <span class="text-warning">List</span>
+      </h1>
+      <form action="" id="book-form">
+        <div class="form-group">
+          <label for="title">Title</label>
+          <input type="text" id="title" class="form-control" required/>
+        </div>
+
+        <div class="form-group">
+          <label for="author">Author</label>
+          <input type="text" id="author" class="form-control" required/>
+        </div>
+
+        <div class="form-group">
+          <label for="title">Year</label>
+          <input type="text" id="year" class="form-control" required/>
+        </div>
+        <input
+          type="submit"
+          value="Add Book"
+          class="btn btn-warning btn-block"
+        />
+      </form>
+      <table class="table table-striped mt-5 text-center">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Year</th>
+          </tr>
+          <tbody id="book-list">
+            
+          </tbody>
+        </thead>
+      </table>
+    </div>
+    <!-- JS File -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js "></script>
+    <script src="./custom.js"></script>
+  </body>
+</html>
