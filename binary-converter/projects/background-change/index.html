@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JS Practice</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="container mt-5 pt-5 text-center">
+      <div
+        class="p-5 mb-5 bg-dark w-50 text-light justify-centent-center mx-auto rounded"
+        style="font-size: 30px;"
+      >
+        Background Color: <span class="color-code">#ffffff</span>
+      </div>
+      <button class="btn btn-primary btn-lg" id="chngBtn">Click Me</button>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js "></script>
+    <script>
+      const hex = [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+      ];
+      const btn = document.getElementById("chngBtn");
+      const colorCode = document.querySelector(".color-code");
+
+      btn.addEventListener("click", function () {
+        let hexColor = "#";
+        for(let i = 0 ; i<6 ; i++){
+          hexColor += hex[randomColor()];
+        }
+        colorCode.textContent =  hexColor;
+        document.body.style.backgroundColor = hexColor;
+      });
+
+      function randomColor(){
+        return Math.floor(Math.random() * hex.length);
+      }
+    </script>
+  </body>
+</html>
